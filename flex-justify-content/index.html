@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Flex justify-content</title>
+</head>
+<style>
+#container {
+  display: flex;
+  justify-content: space-between; /* Can be changed in the live sample */
+}
+
+#container > div {
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(-45deg, #788cff, #b4c8ff);
+}
+#justifyContent {
+  margin: 30px 0px;
+}
+</style>
+<body>
+    <select id="justifyContent">
+        <option value="start">start</option>
+        <option value="end">end</option>
+        <option value="flex-start">flex-start</option>
+        <option value="flex-end">flex-end</option>
+        <option value="center">center</option>
+        <option value="left">left</option>
+        <option value="right">right</option>
+        <option value="baseline">baseline</option>
+        <option value="first baseline">first baseline</option>
+        <option value="last baseline">last baseline</option>
+        <option value="space-between" selected>space-between</option>
+        <option value="space-around">space-around</option>
+        <option value="space-evenly">space-evenly</option>
+        <option value="stretch">stretch</option>
+      </select>
+      
+      <div id="container">
+        <div>Box-1</div>
+        <div>Box-2</div>
+        <div>Box-3</div>
+      </div>
+</body>
+<script>
+var justifyContent = document.getElementById("justifyContent");
+justifyContent.addEventListener("change", function (evt) {
+  document.getElementById("container").style.justifyContent =
+      evt.target.value;
+});
+</script>
+</html>

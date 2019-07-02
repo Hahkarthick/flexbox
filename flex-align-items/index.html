@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Flex align Items</title>
+</head>
+<style>
+#box {
+  display: flex;
+  align-items: center;
+  /* Can be changed in the live sample */
+}
+#box > div {
+  margin: 10px;
+    padding: 20px;
+    border: 2px solid rgb(96, 139, 168);
+    border-radius: 5px;
+    background-color: rgba(96, 139, 168, .2);
+}
+#alignItems {
+  margin: 30px 0px;
+}
+</style>
+<body>
+    <select id="alignItems">
+        <option value="flex-start">flex-start</option>
+        <option value="flex-end">flex-end</option>
+        <option value="center" selected>center</option>
+        <option value="baseline">baseline</option>
+        <option value="stretch">stretch</option>
+    </select>
+      
+    <div id="box">
+    <div>One</div>
+    <div>Two</div>
+    <div>Three
+        <br>has
+        <br>extra
+        <br>text
+    </div>
+    </div>
+</body>
+<script>
+var alignItems = document.getElementById("alignItems");
+alignItems.addEventListener("change", function (evt) {
+  document.getElementById("box").style.alignItems =
+      evt.target.value;
+});
+</script>
+</html>
