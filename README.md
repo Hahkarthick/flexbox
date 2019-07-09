@@ -41,3 +41,17 @@ Stretch : Items are stretch to fill the container
 
 Codepen : https://codepen.io/Hahkarthick/pen/WqzaJR
 
+# Flex Flex-Direction
+
+Flex box are basically render by axes x and y
+The axes are defined by flex-direction it has four properties
+
+Row
+Row-reverse
+Column
+column-reverse
+
+Codepen : https://codepen.io/Hahkarthick/pen/xoQjra
+
+
+

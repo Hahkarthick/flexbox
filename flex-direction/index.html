@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>flex-direction</title>
+</head>
+<style>
+#container {
+  display: flex;
+  flex-direction:row;
+}
+
+#container > div {
+  margin:10px;
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(-45deg, #788cff, #b4c8ff);
+}
+</style>
+<body>
+    <select id="flexDirection">
+        <option selected value="row">row</option>
+        <option value="row-reverse">row-reverse</option>
+        <option value="column">column</option>
+        <option value="column-reverse">column-reverse</option>
+    </select>
+
+    <div id="container">
+        <div>Box-1</div>
+        <div>Box-2</div>
+        <div>Box-3</div>
+    </div>
+</body>
+<script>
+var flexDirection = document.getElementById("flexDirection");
+flexDirection.addEventListener("change", function(evt) {  
+  document.querySelector('#container').style.flexDirection = evt.target.value;
+});
+</script>
+</html>
